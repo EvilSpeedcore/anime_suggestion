@@ -63,3 +63,12 @@ how_old_are_you($ans)
         2: I am a teenager.
         ! Anime: Your name
           MAL: https://myanimelist.net/anime/32281/Kimi_no_Na_wa
+
+is_christmas_near($ans)
+    Is Christmas near?
+    ---
+    $ans = select_1
+        1: Yes! Tell me the tory of miracles, family, love, and forgiveness.
+        ! Anime: Tokyo Godfathers
+          MAL: https://myanimelist.net/anime/759/Tokyo_Godfathers
+        2: No, unfortunately it is only once a year.

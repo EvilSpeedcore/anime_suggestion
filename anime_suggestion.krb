@@ -45,6 +45,18 @@ living_multiple_lives
     use choose_topic_of_the_report()
     when
         questions.choose_topic(2)
+        christmas_status()
+
+not_waiting_for_christmas
+    use christmas_status()
+    when
+        questions.is_christmas_near(2)
+
+waiting_for_christmas
+    use christmas_status()
+    when
+        questions.is_christmas_near(1)
+        special.claim_goal()
 
 animation_movies_anime_approach
     use anime_approach()
