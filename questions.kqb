@@ -36,3 +36,30 @@ jazz_band_name($ans)
         2: Of Love and Peace.
         ! Anime: Kiki's Delivery Service
           MAL: https://myanimelist.net/anime/512/Majo_no_Takkyuubin
+
+choose_topic($ans)
+    If you had to choose the topic of the report, which one would you choose?
+    ---
+    $ans = select_1
+        1: Why do we fall asleep so easily when traveling by a train?
+        2: How modern people cope with living multiple lives?
+
+how_is_your_sex_life($ans)
+    Anyway, how's your sex life?
+    ---
+    $ans = select_1
+        1: Give me a tip on making a long distance relationship work.
+        2: I have fallen in love with older woman.
+        ! Anime: Garnen of Words
+          MAL: https://myanimelist.net/anime/16782/Kotonoha_no_Niwa
+
+how_old_are_you($ans)
+    How old are you?
+    ---
+    $ans = select_1
+        1: I am an adult.
+        ! Anime: 5 Centimeters Per Second
+          MAL: https://myanimelist.net/anime/1689/Byousoku_5_Centimeter
+        2: I am a teenager.
+        ! Anime: Your name
+          MAL: https://myanimelist.net/anime/32281/Kimi_no_Na_wa

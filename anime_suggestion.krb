@@ -15,6 +15,36 @@ films_anime_approach
     use anime_approach()
     when
         questions.ways_to_approach_anime(2)
+        choose_topic_of_the_report()
+
+falling_asleep_in_train
+    use choose_topic_of_the_report()
+    when
+        questions.choose_topic(1)
+        sex_life_status()
+
+long_distance_relationship
+    use sex_life_status()
+    when
+        questions.how_is_your_sex_life(1)
+        age_status()
+
+defining_age
+    use age_status()
+    when
+        questions.how_old_are_you($ans)
+        special.claim_goal()
+
+love_with_older_woman
+    use sex_life_status()
+    when
+        questions.how_is_your_sex_life(2)
+        special.claim_goal()
+
+living_multiple_lives
+    use choose_topic_of_the_report()
+    when
+        questions.choose_topic(2)
 
 animation_movies_anime_approach
     use anime_approach()
@@ -34,25 +64,13 @@ humanism_philosophical_category
         questions.philosophical_category(2)
         jazz_band_name()
 
-visit_world_of_oz
+defining_world_to_visit
     use world_to_visit()
     when
         questions.worlds_to_visit($ans)
         special.claim_goal()
 
-visit_beasts_kingdom
-    use world_to_visit()
-    when
-        questions.worlds_to_visit($ans)
-        special.claim_goal()
-
-love_and_peace_band_name
-    use jazz_band_name()
-    when
-        questions.jazz_band_name($ans)
-        special.claim_goal()
-
-futility_of_war_band_name
+defining_band_name
     use jazz_band_name()
     when
         questions.jazz_band_name($ans)
