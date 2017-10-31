@@ -1,0 +1,38 @@
+# questions.kqb
+
+ways_to_approach_anime($ans)
+    To make your transition to anime smooth, choose the media you like the most.
+    ---
+    $ans = select_1
+        1: Because you know I'm all about these TV shows.
+        2: Nothing better than a good movie and a bunch of popcorn.
+        3: Can I have similar experience to Disney animation movies?
+
+philosophical_category($ans)
+    What philosophical category is closer to you?
+    ---
+    $ans = select_1
+        1: Realism and social problems.
+        2: Humanism and relationship of mankind with nature and technology.
+
+worlds_to_visit($ans)
+    What kind of  world you would like to visit?
+    ---
+    $ans = select_1
+        1: Take me by the hand, lead me to the Japanese Land of Oz.
+        ! Anime: Summer wars
+          MAL: https://myanimelist.net/anime/5681/Summer_Wars
+        2: To the Beast Kingdom!
+        ! Anime: The Boy and the Beast
+          MAL: https://myanimelist.net/anime/28805/Bakemono_no_Ko
+
+jazz_band_name($ans)
+    If you had a jazz band, how would you named it?
+    ---
+    $ans = select_1
+        1: The Futility of War.
+        ! Anime: Howl's Moving Castle
+          MAL: https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro
+        2: Of Love and Peace.
+        ! Anime: Kiki's Delivery Service
+          MAL: https://myanimelist.net/anime/512/Majo_no_Takkyuubin

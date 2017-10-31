@@ -1,0 +1,59 @@
+# pattern_matching.krb
+
+getting_started
+    use getting_started()
+    when
+        python engine.get_ke('questions', 'ways_to_approach_anime').reset()
+        anime_approach()
+
+tv_shows_anime_approach
+    use anime_approach()
+    when
+        questions.ways_to_approach_anime(1)
+
+films_anime_approach
+    use anime_approach()
+    when
+        questions.ways_to_approach_anime(2)
+
+animation_movies_anime_approach
+    use anime_approach()
+    when
+        questions.ways_to_approach_anime(3)
+        philosophical_category()
+
+realism_philosophical_category
+    use philosophical_category()
+    when
+        questions.philosophical_category(1)
+        world_to_visit()
+
+humanism_philosophical_category
+    use philosophical_category()
+    when
+        questions.philosophical_category(2)
+        jazz_band_name()
+
+visit_world_of_oz
+    use world_to_visit()
+    when
+        questions.worlds_to_visit($ans)
+        special.claim_goal()
+
+visit_beasts_kingdom
+    use world_to_visit()
+    when
+        questions.worlds_to_visit($ans)
+        special.claim_goal()
+
+love_and_peace_band_name
+    use jazz_band_name()
+    when
+        questions.jazz_band_name($ans)
+        special.claim_goal()
+
+futility_of_war_band_name
+    use jazz_band_name()
+    when
+        questions.jazz_band_name($ans)
+        special.claim_goal()
