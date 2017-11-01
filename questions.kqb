@@ -72,3 +72,17 @@ is_christmas_near($ans)
         ! Anime: Tokyo Godfathers
           MAL: https://myanimelist.net/anime/759/Tokyo_Godfathers
         2: No, unfortunately it is only once a year.
+
+choose_synopsis($ans)
+    Choose the synopsis.
+    ---
+    $ans = select_1
+        1: Story about rapidly changing relationship between our physical selves and machines.
+        ! Anime: Paprika
+          MAL: https://myanimelist.net/anime/1943/Paprika
+        2: Dark, sophisticated psychological thriller.
+        ! Anime: Perfect Blue
+          MAL: https://myanimelist.net/anime/437/Perfect_Blue
+        3: Journey through time and space.
+        ! Anime: Millennium Actress
+          MAL: https://myanimelist.net/anime/1033/Sennen_Joyuu

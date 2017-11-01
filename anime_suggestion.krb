@@ -47,12 +47,19 @@ living_multiple_lives
         questions.choose_topic(2)
         christmas_status()
 
-not_waiting_for_christmas
+christmas_in_not_near
     use christmas_status()
     when
         questions.is_christmas_near(2)
+        synopsis()
 
-waiting_for_christmas
+choosing_synopsis
+    use synopsis()
+    when
+        questions.choose_synopsis($ans)
+        special.claim_goal()
+
+christmas_in_near
     use christmas_status()
     when
         questions.is_christmas_near(1)
