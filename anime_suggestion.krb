@@ -3,22 +3,87 @@
 getting_started
     use getting_started()
     when
-        python engine.get_ke('questions', 'ways_to_approach_anime').reset()
-        anime_approach()
+        python engine.get_ke('questions', 'media_you_like_the_most').reset()
+        define_favorite_media()
 
-tv_shows_anime_approach
-    use anime_approach()
-    when
-        questions.ways_to_approach_anime(1)
+# --tv shows block--
 
-films_anime_approach
-    use anime_approach()
+tv_shows
+    use define_favorite_media()
     when
-        questions.ways_to_approach_anime(2)
-        choose_topic_of_the_report()
+        questions.media_you_like_the_most(1)
+        define_type_of_anime()
+
+visually_stunning
+    use define_type_of_anime()
+    when
+        questions.choose_the_menu(1)
+        defining_kill_bill_fan()
+
+kill_bill_fan
+    use defining_kill_bill_fan()
+    when
+        questions.fan_of_kill_bill(1)
+        special.claim_goal()
+
+not_a_kill_bill_fan
+    use defining_kill_bill_fan()
+    when
+        questions.fan_of_kill_bill(2)
+        define_what_to_mine()
+
+define_what_to_mine
+    use define_what_to_mine()
+    when
+        questions.what_to_mine($ans)
+        special.claim_goal()
+
+has_a_great_story_to_tell
+    use define_type_of_anime()
+    when
+        questions.choose_the_menu(2)
+        define_institute_to_return_to()
+
+returning_to_institute
+    use define_institute_to_return_to()
+    when
+        questions.trap_card($ans)
+        check $ans in (1, 2)
+        special.claim_goal()
+
+not_returning_to_institute
+    use define_institute_to_return_to()
+    when
+        questions.trap_card($ans)
+        visit_psychiatrist()
+
+visit_psychiatrist
+    use visit_psychiatrist()
+    when
+        questions.want_to_talk_about_it($ans)
+        special.claim_goal()
+
+combination_of_visuals_and_story
+    use define_type_of_anime()
+    when
+        questions.choose_the_menu(3)
+        special.claim_goal()
+
+# --films block--
+
+films
+    use define_favorite_media()
+    when
+        questions.media_you_like_the_most(2)
+        choose_topic_of_the_presentation()
+
+predicting_future
+    use choose_topic_of_the_presentation()
+    when
+        questions.choose_topic(3)
 
 falling_asleep_in_train
-    use choose_topic_of_the_report()
+    use choose_topic_of_the_presentation()
     when
         questions.choose_topic(1)
         sex_life_status()
@@ -29,7 +94,7 @@ long_distance_relationship
         questions.how_is_your_sex_life(1)
         age_status()
 
-defining_age
+define_age
     use age_status()
     when
         questions.how_old_are_you($ans)
@@ -41,11 +106,32 @@ love_with_older_woman
         questions.how_is_your_sex_life(2)
         special.claim_goal()
 
+
 living_multiple_lives
-    use choose_topic_of_the_report()
+    use choose_topic_of_the_presentation()
     when
         questions.choose_topic(2)
         christmas_status()
+
+# --animation movies block--
+
+animation_movies
+    use define_favorite_media()
+    when
+        questions.media_you_like_the_most(3)
+        philosophical_subject()
+
+realism_philosophical_subject
+    use philosophical_subject()
+    when
+        questions.philosophical_subject(1)
+        world_to_visit()
+
+humanism_philosophical_subject
+    use philosophical_subject()
+    when
+        questions.philosophical_subject(2)
+        jazz_band_name()
 
 christmas_in_not_near
     use christmas_status()
@@ -53,7 +139,7 @@ christmas_in_not_near
         questions.is_christmas_near(2)
         synopsis()
 
-choosing_synopsis
+choose_synopsis
     use synopsis()
     when
         questions.choose_synopsis($ans)
@@ -65,31 +151,13 @@ christmas_in_near
         questions.is_christmas_near(1)
         special.claim_goal()
 
-animation_movies_anime_approach
-    use anime_approach()
-    when
-        questions.ways_to_approach_anime(3)
-        philosophical_category()
-
-realism_philosophical_category
-    use philosophical_category()
-    when
-        questions.philosophical_category(1)
-        world_to_visit()
-
-humanism_philosophical_category
-    use philosophical_category()
-    when
-        questions.philosophical_category(2)
-        jazz_band_name()
-
-defining_world_to_visit
+define_world_to_visit
     use world_to_visit()
     when
         questions.worlds_to_visit($ans)
         special.claim_goal()
 
-defining_band_name
+define_band_name
     use jazz_band_name()
     when
         questions.jazz_band_name($ans)

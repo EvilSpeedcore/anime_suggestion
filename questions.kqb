@@ -1,6 +1,6 @@
 # questions.kqb
 
-ways_to_approach_anime($ans)
+media_you_like_the_most($ans)
     To make your transition to anime smooth, choose the media you like the most.
     ---
     $ans = select_1
@@ -8,41 +8,71 @@ ways_to_approach_anime($ans)
         2: Nothing better than a good movie and a bunch of popcorn.
         3: Can I have similar experience to Disney animation movies?
 
-philosophical_category($ans)
-    What philosophical category is closer to you?
-    ---
-    $ans = select_1
-        1: Realism and social problems.
-        2: Humanism and relationship of mankind with nature and technology.
 
-worlds_to_visit($ans)
-    What kind of  world you would like to visit?
-    ---
-    $ans = select_1
-        1: Take me by the hand, lead me to the Japanese Land of Oz.
-        ! Anime: Summer wars
-          MAL: https://myanimelist.net/anime/5681/Summer_Wars
-        2: To the Beast Kingdom!
-        ! Anime: The Boy and the Beast
-          MAL: https://myanimelist.net/anime/28805/Bakemono_no_Ko
+# --tv shows block--
 
-jazz_band_name($ans)
-    If you had a jazz band, how would you named it?
+choose_the_menu($ans)
+    What is on the menu?
     ---
     $ans = select_1
-        1: The Futility of War.
-        ! Anime: Howl's Moving Castle
-          MAL: https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro
-        2: Of Love and Peace.
-        ! Anime: Kiki's Delivery Service
-          MAL: https://myanimelist.net/anime/512/Majo_no_Takkyuubin
+        1: A feast for the eyes.
+        2: Food for thought.
+        3: Why not both?
+        ! Anime: Mononoke.
+          MAL: https://myanimelist.net/anime/2246/Mononoke
+
+fan_of_kill_bill($ans)
+    Are you, perhaps, a die-hard Kill Bill fan?
+    ---
+    $ans = select_1
+        1: *Humming the tune of a Twisted Nerve song*
+        ! Anime: Kemonozume
+          MAL: https://myanimelist.net/anime/1454/Kemonozume
+        2: Too gory for me.
+
+what_to_mine($ans)
+    What to mine?
+    ---
+    $ans = select_1
+        1: Ethereum.
+        ! Anime: C: The Money of Soul and Possibility Controls
+          MAL: https://myanimelist.net/anime/10163/C__The_Money_of_Soul_and_Possibility_Control
+        2: Minerals.
+        ! Anime: Tsuritama.
+          MAL: https://myanimelist.net/anime/12883/Tsuritama?q=Tsuritama%20
+
+trap_card($ans)
+    You just activated my trap card! Choose 1 institution you would like to revisit one day.
+    ---
+    $ans = select_1
+        1: University has been the best time of my life.
+        ! Anime: The Tatami Galaxy
+          MAL: https://myanimelist.net/anime/7785/Yojouhan_Shinwa_Taikei
+        2: Take me home, to a school on a hill.
+        ! Anime: Ping Pong The Animation
+          MAL: https://myanimelist.net/anime/22135/Ping_Pong_The_Animation
+        3: I got no desire to revisit these places.
+
+want_to_talk_about_it($ans)
+    Want to talk about it?
+    ---
+    $ans = select_1
+        1: Yes, why not?
+        ! Anime: Kuuchuu Buranko
+          MAL: https://myanimelist.net/anime/6774/Kuuchuu_Buranko
+        2: No, it is personal.
+        ! Anime: Kuuchuu Buranko
+          MAL: https://myanimelist.net/anime/6774/Kuuchuu_Buranko
+
+# --films block--
 
 choose_topic($ans)
-    If you had to choose the topic of the report, which one would you choose?
+    If you had to choose the topic of your English lesson presentation, which one would you choose?
     ---
     $ans = select_1
         1: Why do we fall asleep so easily when traveling by a train?
         2: How modern people cope with living multiple lives?
+        3: What does the future have in store for us?
 
 how_is_your_sex_life($ans)
     Anyway, how's your sex life?
@@ -86,3 +116,34 @@ choose_synopsis($ans)
         3: Journey through time and space.
         ! Anime: Millennium Actress
           MAL: https://myanimelist.net/anime/1033/Sennen_Joyuu
+
+# --animation movies block--
+
+philosophical_subject($ans)
+    Imagine yourself as a philosopher, choose the subject of your next lecture.
+    ---
+    $ans = select_1
+        1: Realism and social problems.
+        2: Humanism and relationship of mankind with nature and technology.
+
+worlds_to_visit($ans)
+    What kind of  world you would like to visit?
+    ---
+    $ans = select_1
+        1: Take me by the hand, lead me to the Japanese Land of Oz.
+        ! Anime: Summer wars
+          MAL: https://myanimelist.net/anime/5681/Summer_Wars
+        2: To the Beast Kingdom!
+        ! Anime: The Boy and the Beast
+          MAL: https://myanimelist.net/anime/28805/Bakemono_no_Ko
+
+jazz_band_name($ans)
+    If you had a jazz band, how would you named it?
+    ---
+    $ans = select_1
+        1: The Futility of War.
+        ! Anime: Howl's Moving Castle
+          MAL: https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro
+        2: Of Love and Peace.
+        ! Anime: Kiki's Delivery Service
+          MAL: https://myanimelist.net/anime/512/Majo_no_Takkyuubin
