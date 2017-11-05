@@ -73,6 +73,29 @@ choose_topic($ans)
         1: Why do we fall asleep so easily when traveling by a train?
         2: How modern people cope with living multiple lives?
         3: What does the future have in store for us?
+        4: Is there life after death?
+
+how_do_you_like_your_coffee($ans)
+    How do you like your coffee?
+    ---
+    $ans = select_1
+        1: Classic.
+        ! Anime: Akira.
+          MAL: https://myanimelist.net/anime/47/Akira
+        2: 3 in 1.
+        ! Anime: Memories
+          MAL: https://myanimelist.net/anime/1462/Memories
+
+what_about_art_house($ans)
+    What if we step into art house territory?
+    ---
+    $ans = select_1
+        1: I am open for any suggestions.
+        ! Anime: Mind Game
+          MAL: https://myanimelist.net/anime/875/Mind_Game
+        2: Please, have mercy on me.
+        ! Anime: Colorful
+          MAL: https://myanimelist.net/anime/8142/Colorful_Movie
 
 how_is_your_sex_life($ans)
     Anyway, how's your sex life?

@@ -81,6 +81,13 @@ predicting_future
     use choose_topic_of_the_presentation()
     when
         questions.choose_topic(3)
+        coffee()
+
+life_after_death
+    use choose_topic_of_the_presentation()
+    when
+        questions.choose_topic(4)
+        art_house()
 
 falling_asleep_in_train
     use choose_topic_of_the_presentation()
@@ -128,6 +135,18 @@ choose_synopsis
     use synopsis()
     when
         questions.choose_synopsis($ans)
+        try_again()
+
+coffee
+    use coffee()
+    when
+        questions.how_do_you_like_your_coffee($ans)
+        try_again()
+
+art_house
+    use art_house()
+    when
+        questions.what_about_art_house($ans)
         try_again()
 
 # --animation movies block--
