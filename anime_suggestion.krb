@@ -14,6 +14,12 @@ tv_shows
         questions.media_you_like_the_most(1)
         define_type_of_anime()
 
+combination_of_visuals_and_story
+    use define_type_of_anime()
+    when
+        questions.choose_the_menu(3)
+        try_again()
+
 visually_stunning
     use define_type_of_anime()
     when
@@ -24,7 +30,7 @@ kill_bill_fan
     use defining_kill_bill_fan()
     when
         questions.fan_of_kill_bill(1)
-        special.claim_goal()
+        try_again()
 
 not_a_kill_bill_fan
     use defining_kill_bill_fan()
@@ -36,7 +42,7 @@ define_what_to_mine
     use define_what_to_mine()
     when
         questions.what_to_mine($ans)
-        special.claim_goal()
+        try_again()
 
 has_a_great_story_to_tell
     use define_type_of_anime()
@@ -49,7 +55,7 @@ returning_to_institute
     when
         questions.trap_card($ans)
         check $ans in (1, 2)
-        special.claim_goal()
+        try_again()
 
 not_returning_to_institute
     use define_institute_to_return_to()
@@ -61,13 +67,7 @@ visit_psychiatrist
     use visit_psychiatrist()
     when
         questions.want_to_talk_about_it($ans)
-        special.claim_goal()
-
-combination_of_visuals_and_story
-    use define_type_of_anime()
-    when
-        questions.choose_the_menu(3)
-        special.claim_goal()
+        try_again()
 
 # --films block--
 
@@ -98,20 +98,37 @@ define_age
     use age_status()
     when
         questions.how_old_are_you($ans)
-        special.claim_goal()
+        try_again()
 
 love_with_older_woman
     use sex_life_status()
     when
         questions.how_is_your_sex_life(2)
-        special.claim_goal()
-
+        try_again()
 
 living_multiple_lives
     use choose_topic_of_the_presentation()
     when
         questions.choose_topic(2)
         christmas_status()
+
+christmas_in_near
+    use christmas_status()
+    when
+        questions.is_christmas_near(1)
+        try_again()
+
+christmas_in_not_near
+    use christmas_status()
+    when
+        questions.is_christmas_near(2)
+        synopsis()
+
+choose_synopsis
+    use synopsis()
+    when
+        questions.choose_synopsis($ans)
+        try_again()
 
 # --animation movies block--
 
@@ -133,32 +150,26 @@ humanism_philosophical_subject
         questions.philosophical_subject(2)
         jazz_band_name()
 
-christmas_in_not_near
-    use christmas_status()
+define_band_name
+    use jazz_band_name()
     when
-        questions.is_christmas_near(2)
-        synopsis()
-
-choose_synopsis
-    use synopsis()
-    when
-        questions.choose_synopsis($ans)
-        special.claim_goal()
-
-christmas_in_near
-    use christmas_status()
-    when
-        questions.is_christmas_near(1)
-        special.claim_goal()
+        questions.jazz_band_name($ans)
+        try_again()
 
 define_world_to_visit
     use world_to_visit()
     when
         questions.worlds_to_visit($ans)
-        special.claim_goal()
+        try_again()
 
-define_band_name
-    use jazz_band_name()
+try_again
+    use try_again()
     when
-        questions.jazz_band_name($ans)
-        special.claim_goal()
+        questions.try_again(1)
+        python print("Here we go again.")
+        getting_started()
+
+do_not_try_again
+    use try_again()
+    when
+        questions.try_again(2)

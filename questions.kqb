@@ -147,3 +147,13 @@ jazz_band_name($ans)
         2: Of Love and Peace.
         ! Anime: Kiki's Delivery Service
           MAL: https://myanimelist.net/anime/512/Majo_no_Takkyuubin
+
+#--additional block--
+
+try_again($ans)
+    Try again?
+    ---
+    $ans = select_1
+        1: Yes.
+        2: No.
+        ! Enjoy.
